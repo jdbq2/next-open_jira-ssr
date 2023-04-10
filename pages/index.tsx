@@ -1,5 +1,6 @@
 import { Layout } from "@/components/layouts";
-import { Card, CardContent, CardHeader, Grid } from "@mui/material";
+import { EntryList, NewEntry } from "@/components/ui";
+import { Card, CardHeader, Grid } from "@mui/material";
 import { NextPage } from "next";
 
 const Home: NextPage = () => {
@@ -8,21 +9,21 @@ const Home: NextPage = () => {
       <Grid container spacing={2}>
         <Grid item xs={12} sm={4}>
           <Card sx={{ height: "calc(100vh - 100px )" }}>
-            <CardHeader title="pendientes" />
-            <CardContent>
-              {/* Agregar nueva entrada */}
-              {/* Listar entradas */}
-            </CardContent>
+            <CardHeader title="Pendientes" />
+            <NewEntry />
+            <EntryList status="pending" />
           </Card>
         </Grid>
         <Grid item xs={12} sm={4}>
           <Card sx={{ height: "calc(100vh - 100px )" }}>
-            <CardHeader title="progreso" />
+            <CardHeader title="En Progreso" />
+            <EntryList status="in-progress" />
           </Card>
         </Grid>
         <Grid item xs={12} sm={4}>
           <Card sx={{ height: "calc(100vh - 100px )" }}>
-            <CardHeader title="completadas" />
+            <CardHeader title="Completadas" />
+            <EntryList status="finished" />
           </Card>
         </Grid>
       </Grid>
