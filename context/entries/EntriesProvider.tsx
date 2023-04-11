@@ -12,26 +12,7 @@ interface entriesState {
 }
 
 const INITIAL_ENTRIES_STATE: entriesState = {
-  entries: [
-    {
-      _id: uuidv4(),
-      description: "texto demo 1",
-      status: "pending",
-      createdAt: Date.now(),
-    },
-    {
-      _id: uuidv4(),
-      description: "texto demo 2",
-      status: "in-progress",
-      createdAt: Date.now(),
-    },
-    {
-      _id: uuidv4(),
-      description: "texto demo 3",
-      status: "finished",
-      createdAt: Date.now(),
-    },
-  ],
+  entries: [],
 };
 
 export const EntriesProvider: FC<Props> = ({ children }) => {
