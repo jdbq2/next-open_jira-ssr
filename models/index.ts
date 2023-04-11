@@ -1,2 +1,2 @@
 export * from "./Entry";
-export { default as Entry } from "./Entry";
+export { default as Entry, type IEntry } from "./Entry";
